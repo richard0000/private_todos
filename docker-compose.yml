@@ -1,0 +1,33 @@
+version: '3'
+services:
+  web:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    environment:
+        POSTGRES_DB: "db"
+        POSTGRES_HOST_AUTH_METHOD: "trust"
+
+  webpack:
+    build: .
+    command: ./bin/webpack-dev-server --inline true
+    volumes:
+      - .:/app
+    ports:
+      - '3035:3035'
+    environment:
+      - "NODE_ENV=development"
+      - "RAILS_ENV=development"
+      - "WEBPACKER_DEV_SERVER_HOST=0.0.0.0"
+volumes:
+  pg_data:
+    driver: local
