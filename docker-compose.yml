@@ -8,6 +8,8 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    environment:
+      - WEBPACKER_DEV_SERVER_HOST=webpack
 
   db:
     image: postgres
