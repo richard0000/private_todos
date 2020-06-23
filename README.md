@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Rails 6 - Docker - Complete Basic App
 
-Things you may want to cover:
+### This is an example Rails 6 Dockerized application you can use as a start point to your new web app. 
 
-* Ruby version
+## Whats's covered?
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Ruby 2.7
+- Rails 6
+- Authentication with Devise
+- Bootstrap 4 Styles
+- Todo CRUD (with user association)
+- Live Documentation Server

@@ -28,7 +28,7 @@ RUN chmod +x /usr/bin/init.sh
 ENTRYPOINT ["init.sh"]
 
 # Expose the port
-EXPOSE 3000
+EXPOSE 3000 8808
 
 # Start the main process.
 CMD ["rails", "server", "-b", "0.0.0.0"]

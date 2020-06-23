@@ -3,6 +3,7 @@ class TasksController < ApplicationController
 
   # GET /tasks
   # GET /tasks.json
+  # @description Lists all the tasks for the loggen in user
   def index
     @tasks = current_user.tasks
   end

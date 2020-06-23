@@ -10,6 +10,12 @@ services:
       - db
     environment:
       - WEBPACKER_DEV_SERVER_HOST=webpack
+  
+  yard:
+    build: .
+    command: yard server --reload
+    ports:
+      - "8808:8808"
 
   db:
     image: postgres
