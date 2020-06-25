@@ -5,7 +5,7 @@ class TasksController < ApplicationController
   # GET /tasks.json
   # @description Lists all the tasks for the loggen in user
   def index
-    @tasks = current_user.tasks
+    @tasks = current_user.tasks if current_user.present?
   end
 
   # GET /tasks/1
@@ -26,7 +26,7 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     @task = Task.new(task_params)
-    @task.user = current_user
+    @task.user_id = current_user.id
 
     respond_to do |format|
       if @task.save
