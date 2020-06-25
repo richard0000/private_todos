@@ -65,7 +65,7 @@ development:
     public: webpack:3035
     hmr: false
     # Inline should be set to true if using HMR
-    inline: true
+    inline: false
     overlay: true
     compress: true
     disable_host_check: true
@@ -89,10 +89,10 @@ production:
   <<: *default
 
   # Production depends on precompilation of packs prior to booting for performance.
-  compile: false
+  compile: true
 
   # Extract and emit a css file
-  extract_css: true
+  extract_css: false
 
   # Cache manifest.json for performance
   cache_manifest: true
