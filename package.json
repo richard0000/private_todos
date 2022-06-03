@@ -4,7 +4,7 @@
   "dependencies": {
     "@angular/common": "^9.1.11",
     "@angular/compiler": "^9.1.11",
-    "@angular/core": "^9.1.11",
+    "@angular/core": "^11.0.5",
     "@angular/platform-browser": "^9.1.11",
     "@angular/platform-browser-dynamic": "^9.1.11",
     "@rails/actioncable": "^6.0.0",
